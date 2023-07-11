@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* logo to go here */}
-      <Link to="/">
-        <h1>logo</h1>
+      <Link className="logo" to="/">
+        <h2>logo</h2>
       </Link>
       {/* logo end */}
       <button type="button" className="toggle-nav" onClick={openSidebar}>

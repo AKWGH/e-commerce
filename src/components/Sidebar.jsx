@@ -21,7 +21,9 @@ const Sidebar = () => {
       }
     >
       <div className="sidebar-header">
-        <h2>Logo</h2>
+        <Link to="/" onClick={closeSidebar}>
+          <h2 className="logo">Logo</h2>
+        </Link>
         <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
