@@ -278,5 +278,79 @@
     max-width: 30rem;
   }
 }
-
 /* end of about page */
+
+/* =================== */
+/* Home Hero component */
+/* =================== */
+.main-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  min-height: 40vh;
+
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+.main-hero-content h1 {
+  color: var(--clr-black);
+  font-size: 3rem;
+  line-height: 1.25;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.main-hero-content p {
+  color: var(--colour-grey-text);
+  line-height: 1.5;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+.main-hero-content a {
+  font-size: 1rem;
+  width: 8rem;
+  text-align: center;
+}
+.img-container {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .main-hero-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 40%;
+  }
+  .img-container {
+    display: block;
+    position: relative;
+    height: 60%;
+    width: 40%;
+    max-width: 30rem;
+  }
+  .hero-main-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+  }
+  .hero-main-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 5rem);
+    gap: 4rem;
+  }
+  .hero-small-img {
+    position: absolute;
+    bottom: 1rem;
+    left: -2rem;
+    border-radius: 25%;
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+/* end of hero component */
