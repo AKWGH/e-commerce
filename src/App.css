@@ -354,3 +354,100 @@
 }
 
 /* end of hero component */
+
+/* ================== */
+/* Services component */
+/* ================== */
+.services-section {
+  background-color: var(--colour-primary1);
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+}
+.services-header {
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.services-header h3 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: var(--colour-primary9);
+  font-weight: 900;
+}
+.services-header p {
+  color: var(--colour-primary9);
+  font-weight: 500;
+  line-height: 1.5;
+}
+/* */
+.services-centre {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.service {
+  height: 20rem;
+  width: 90vw;
+  max-width: 40rem;
+  padding: 2rem 1rem;
+  margin: auto;
+
+  text-align: center;
+  background-color: var(--colour-primary9);
+  font-weight: 700;
+  color: var(--colour-primary1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 5px;
+}
+.service h4 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+.service p {
+  line-height: 2;
+}
+.service-icon {
+  font-size: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .services-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .services-header p {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+  .services-header h3 {
+    font-size: 2.5rem;
+  }
+}
+/*  */
+@media (min-width: 1100px) {
+  .services-centre {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 65rem;
+  }
+  .service {
+    max-width: 20rem;
+  }
+}
+/* end of services */

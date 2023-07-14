@@ -13,8 +13,8 @@ const Hero = () => {
           Transform Repeat
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel earum
-          officia soluta aspernatur autem ullam velit quia, alias omnis quasi!
+          Endless inspiration, where every purchase fuels your journey of
+          personal growth and positive change.
         </p>
         <Link to="/products" className="btn">
           shop now
