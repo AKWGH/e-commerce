@@ -10,8 +10,13 @@ const Contact = () => {
           delightful surprises by joining our newsletter today. Stay connected
           and be inspired!
         </p>
-        <form action="" className="contact-form">
+        <form
+          action="https://formspree.io/f/mjvqvqbk"
+          method="POST"
+          className="contact-form"
+        >
           <input
+            name="email"
             type="email"
             className="form-input"
             placeholder="enter email"
