@@ -26,3 +26,8 @@ export const services = [
     text: "With a rich history of innovation, we have been at the forefront of shaping the online shopping landscape, delivering excellence since our inception.",
   },
 ];
+
+export const products_url = "https://course-api.com/react-store-products";
+
+export const single_product_url =
+  "https://course-api.com/react-store-single-product?id=";
