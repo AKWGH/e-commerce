@@ -29,6 +29,9 @@
 
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  --header-size: 2rem;
+  --text-size: 1.25rem;
 }
 
 * {
@@ -74,4 +77,10 @@ a {
 .section-centre {
   width: 90vw;
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  p {
+    font-size: 1.25rem;
+  }
 }
