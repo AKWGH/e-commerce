@@ -240,12 +240,6 @@
   object-fit: cover;
 }
 
-.underline {
-  width: 6rem;
-  height: 3px;
-  background-color: var(--colour-grey-heading);
-  margin-bottom: 1rem;
-}
 .about-page {
   min-height: calc(100vh - 15rem);
 }
@@ -536,3 +530,95 @@
   }
 }
 /* end of contact */
+
+/* ========================== */
+/* FeaturedProducts component */
+/* ========================== */
+.featured-products-section {
+  background-color: whitesmoke;
+  padding: 2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 40rem;
+}
+.featured-products-section h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ================= */
+/* Product component */
+/* ================= */
+.featured-products {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  border-radius: 6px;
+  position: relative;
+  /* max-width: 20rem; */
+  /* min-width: 15%; */
+}
+
+.product-container img {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.product-container a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--colour-primary5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--clr-white);
+  font-size: 1.25rem;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+.product-container:hover img {
+  opacity: 0.5;
+}
+.product-container:hover a {
+  opacity: 1;
+}
+
+.featured-products footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--colour-primary5);
+  margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+  .featured-products {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-container {
+    max-width: 20rem;
+  }
+}
+
+/* end of featured products */
