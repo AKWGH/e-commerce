@@ -5,11 +5,14 @@ import "./index.css";
 
 // provider to wrap around the app
 import { ProductsProvider } from "./contexts/products_context.jsx";
+import { FilterProvider } from "./contexts/filter_context.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ProductsProvider>
-      <App />
+      <FilterProvider>
+        <App />
+      </FilterProvider>
     </ProductsProvider>
   </React.StrictMode>
 );
