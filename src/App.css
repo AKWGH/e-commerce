@@ -628,6 +628,7 @@
 /* =========================== */
 
 .single-product-page {
+  min-height: calc(100vh - 10rem);
 }
 .single-product-section a {
   margin-bottom: 1rem;
