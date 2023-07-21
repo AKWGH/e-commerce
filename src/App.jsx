@@ -11,6 +11,7 @@ import ErrorPage from "./pages/ErrorPage";
 import AboutPage from "./pages/AboutPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import SingleProductPage from "./pages/SingleProductPage";
+import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<SingleProductPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

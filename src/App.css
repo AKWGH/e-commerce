@@ -603,7 +603,7 @@
   opacity: 1;
 }
 
-.featured-products footer {
+.product-footer {
   display: flex;
   justify-content: space-between;
   color: var(--colour-primary5);
@@ -676,6 +676,7 @@
 .gallery img {
   height: 3rem;
   width: 18%;
+  cursor: pointer;
   border-radius: 5px;
 }
 .gallery-active {
@@ -779,3 +780,158 @@
 
 /* end of AmountButtons component */
 /* end of single product page */
+
+/* =========================== */
+/* ProductsPage component */
+/* =========================== */
+
+/* grid-view component */
+.grid-products-container {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.grid-products-container article {
+  min-width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.products-page-content-container {
+  width: 90vw;
+  margin: auto;
+}
+
+@media (min-width: 992px) {
+  .grid-products-container article {
+    min-width: 15rem;
+    max-width: 15rem;
+  }
+
+  .grid-products-container article footer p {
+    font-size: 0.9rem;
+  }
+
+  .grid-products-container {
+    width: 800px;
+  }
+  .products-page-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-products-container article {
+    width: 10rem;
+  }
+}
+
+/* end of grid-view component */
+
+/* ListView component */
+.listview-section {
+}
+
+.listview-img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.listview-name {
+  margin-bottom: 0.5rem;
+}
+.listview-price {
+  color: var(--colour-primary5);
+  margin-bottom: 0.5rem;
+}
+.listview-description {
+  max-width: 45rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 992px) {
+  .listview-section {
+    width: 800px;
+  }
+}
+.listview-btn {
+  font-size: 0.5rem !important;
+  padding: 0.25rem 0.5rem !important;
+  margin-bottom: 4rem;
+}
+
+/* end of ListView */
+
+/* end of ProductsPage */
+
+/* sort component */
+
+.sort-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btns-container-sort {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.list-type-btn {
+  background: transparent;
+  border: 1px solid var(--clr-black);
+  color: var(--clr-black);
+  width: 1.5rem;
+  border-radius: 5px;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btns-container-sort button svg {
+  font-size: 1rem;
+}
+
+.active-list-type {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.sort-label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.sort-input {
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.25rem, 0.5rem;
+}
+
+@media (min-width: 650px) {
+  .sort-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sort-section hr {
+    width: 20%;
+  }
+}
+
+/* end of sort component */
