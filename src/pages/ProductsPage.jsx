@@ -7,7 +7,7 @@ import ProductList from "../components/ProductList";
 
 const ProductsPage = () => {
   return (
-    <main>
+    <main className="product-page-height">
       <PageHero title="products" />
 
       <div className="products-page-content-container">

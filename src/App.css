@@ -610,7 +610,7 @@
   margin-top: 1rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1020px) {
   .featured-products {
     flex-direction: row;
     justify-content: center;
@@ -732,8 +732,8 @@
 
 .colour-btn {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: #222;
   color: white;
@@ -785,6 +785,10 @@
 /* ProductsPage component */
 /* =========================== */
 
+.product-page-height {
+  min-height: calc(100vh - 10rem);
+}
+
 /* grid-view component */
 .grid-products-container {
   gap: 2rem;
@@ -805,7 +809,7 @@
   margin: auto;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1020px) {
   .grid-products-container article {
     min-width: 15rem;
     max-width: 15rem;
@@ -858,7 +862,7 @@
   max-width: 45rem;
   margin-bottom: 1rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1020px) {
   .listview-section {
     width: 800px;
   }
@@ -876,6 +880,7 @@
 /* sort component */
 
 .sort-section {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -935,3 +940,105 @@
 }
 
 /* end of sort component */
+
+/* filter Component */
+
+.form-control {
+  margin-bottom: 1.25rem;
+}
+.filter-title {
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+.filter-content {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.search-input {
+  padding: 0.5rem;
+  background-color: var(--colour-grey-light);
+  letter-spacing: 0.1rem;
+  border-color: transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.search-input::placeholder {
+  text-transform: capitalize;
+}
+.categories-container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.categories-container button {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  color: var(--colour-grey-heading);
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+.active-category {
+  border-bottom: 2px solid var(--colour-grey-heading) !important;
+}
+
+.company-input {
+  margin-top: 0.5rem;
+  background-color: var(--colour-grey-light);
+  border: transparent;
+  padding: 0.25rem;
+  border: 5px;
+}
+
+.colours-form-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 0.25rem;
+}
+
+.all-btn {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+  color: var(--colour-grey-heading);
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.price-input {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shipping {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.clear-btn {
+  background-color: var(--clr-red-dark);
+  color: var(--clr-white);
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  text-transform: capitalize;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  border: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 1020px) {
+  .filter-content {
+    position: sticky;
+    top: 1rem;
+  }
+}
+
+/* end of filter Component */
