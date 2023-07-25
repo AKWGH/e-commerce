@@ -1269,3 +1269,7 @@
 
 /* end of empty cart */
 /* end of CartPage */
+
+.error-container {
+  min-height: calc(100vh - 10rem);
+}

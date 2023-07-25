@@ -13,6 +13,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import SingleProductPage from "./pages/SingleProductPage";
 import ProductsPage from "./pages/ProductsPage";
 import CartPage from "./pages/CartPage";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
@@ -23,7 +24,14 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route
+            path="/checkout"
+            element={
+              <PrivateRoute>
+                <CheckoutPage />
+              </PrivateRoute>
+            }
+          />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:id" element={<SingleProductPage />} />
           <Route path="/cart" element={<CartPage />} />

@@ -7,15 +7,35 @@ import "./index.css";
 import { ProductsProvider } from "./contexts/products_context.jsx";
 import { FilterProvider } from "./contexts/filter_context.jsx";
 import { CartProvider } from "./contexts/cart_context.jsx";
+import { UserProvider } from "./contexts/user_context.jsx";
+
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
+
+// domain
+// akw.uk.auth0.com
+
+// clientid
+// wtHKzsdOiKBYt7uLPAK2PsURpN3aejOl
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
+    <Auth0Provider
+      domain="akw.uk.auth0.com"
+      clientId="wtHKzsdOiKBYt7uLPAK2PsURpN3aejOl"
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+      }}
+      cacheLocation="localstorage"
+    >
+      <UserProvider>
+        <ProductsProvider>
+          <FilterProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </FilterProvider>
+        </ProductsProvider>
+      </UserProvider>
+    </Auth0Provider>
   </React.StrictMode>
 );

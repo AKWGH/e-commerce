@@ -9,10 +9,13 @@ import { FaTimes } from "react-icons/fa";
 import CartButtons from "./CartButtons";
 // contexts
 import { useProductsContext } from "../contexts/products_context";
+import { useUserContext } from "../contexts/user_context";
 
 const Sidebar = () => {
   // destructure from context
   const { isSidebarOpen, closeSidebar } = useProductsContext();
+
+  const { myUser } = useUserContext();
 
   return (
     <aside
@@ -39,11 +42,13 @@ const Sidebar = () => {
             </li>
           );
         })}
-        <li>
-          <Link onClick={closeSidebar} to="/checkout">
-            checkout
-          </Link>
-        </li>
+        {myUser && (
+          <li>
+            <Link onClick={closeSidebar} to="/checkout">
+              checkout
+            </Link>
+          </li>
+        )}
       </ul>
       <div className="centre-buttons">
         <CartButtons />

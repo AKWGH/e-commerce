@@ -9,10 +9,12 @@ import { FaBars } from "react-icons/fa";
 import CartButtons from "./CartButtons";
 // context
 import { useProductsContext } from "../contexts/products_context";
+import { useUserContext } from "../contexts/user_context";
 
 const Navbar = () => {
   // destructure context
   const { openSidebar } = useProductsContext();
+  const { myUser } = useUserContext();
   return (
     <nav className="navbar">
       {/* logo to go here */}
@@ -32,6 +34,11 @@ const Navbar = () => {
             </li>
           );
         })}
+        {myUser && (
+          <li>
+            <Link to="/checkout">checkout</Link>
+          </li>
+        )}
       </ul>
       <div className="cart-buttons-control">
         <CartButtons />
