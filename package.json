@@ -2,7 +2,6 @@
   "name": "e-commerce",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "netdev": "netlify dev",
     "dev": "vite",
