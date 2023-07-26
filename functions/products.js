@@ -1,10 +1,12 @@
 const Airtable = require("airtable-node");
 
+require("dotenv").config();
+
 const airtable = new Airtable({
-  apiKey: import.meta.env.VITE_AIRTABLE_API_KEY,
+  apiKey: process.env.AIRTABLE_API_KEY,
 })
-  .base(import.meta.env.VITE_AIRTABLE_BASE)
-  .table(import.meta.env.VITE_AIRTABLE_TABLE);
+  .base(process.env.AIRTABLE_BASE)
+  .table(process.env.AIRTABLE_TABLE);
 
 exports.handler = async (event, context, cb) => {
   try {
