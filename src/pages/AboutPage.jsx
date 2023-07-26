@@ -2,7 +2,7 @@ import React from "react";
 
 import PageHero from "../components/PageHero";
 
-import placeholder from "../assets/placeholder.jpg";
+import placeholder from "../assets/placeholder.svg";
 
 const AboutPage = () => {
   return (

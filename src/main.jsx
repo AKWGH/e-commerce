@@ -9,13 +9,7 @@ import { FilterProvider } from "./contexts/filter_context.jsx";
 import { CartProvider } from "./contexts/cart_context.jsx";
 import { UserProvider } from "./contexts/user_context.jsx";
 
-import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
-
-// domain
-// akw.uk.auth0.com
-
-// clientid
-// wtHKzsdOiKBYt7uLPAK2PsURpN3aejOl
+import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
