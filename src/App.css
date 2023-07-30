@@ -688,8 +688,18 @@
   .main-image {
     height: 25rem;
   }
+
   .gallery img {
     height: 6rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-image {
+    width: 600px;
+  }
+  .gallery {
+    width: 600px;
   }
 }
 /* end of product images */
