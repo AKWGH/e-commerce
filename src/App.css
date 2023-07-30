@@ -1273,3 +1273,20 @@
 .error-container {
   min-height: calc(100vh - 10rem);
 }
+
+/* styling bug fixes */
+.error-message-container {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 650px) {
+  .error-message-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1020px) {
+  .error-message-container {
+    width: 800px;
+  }
+}

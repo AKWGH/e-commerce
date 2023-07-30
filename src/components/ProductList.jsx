@@ -9,9 +9,11 @@ const ProductList = () => {
 
   if (filtered_products.length < 1) {
     return (
-      <h5 style={{ textTransform: "none" }}>
-        Sorry no products matched your search
-      </h5>
+      <div className="error-message-container">
+        <h5 style={{ textTransform: "none" }}>
+          Sorry no products matched your search
+        </h5>
+      </div>
     );
   }
   if (grid_view === false) {
