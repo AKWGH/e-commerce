@@ -707,7 +707,7 @@
 @media (min-width: 1000px) {
   .products-centre {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 2rem;
   }
   .single-product-content {
