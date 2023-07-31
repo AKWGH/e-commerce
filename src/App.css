@@ -1305,3 +1305,12 @@
     width: 800px;
   }
 }
+/* cart totals overflow smallscreen fix */
+@media (max-width: 400px) {
+  .cart-total-link {
+    width: 20rem;
+  }
+  .cart-total {
+    width: 20rem;
+  }
+}
