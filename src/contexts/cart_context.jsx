@@ -5,6 +5,7 @@ import reducer from "../reducers/cart_reducer";
 // actions
 import {
   ADD_TO_CART,
+  CHECK_FREE_SHIPPING,
   CLEAR_CART,
   COUNT_CART_TOTALS,
   REMOVE_CART_ITEM,
@@ -24,6 +25,7 @@ const initialState = {
   total_items: 0,
   total_amount: 0,
   shipping_fee: 399,
+  free_shipping: true,
 };
 
 // creates context
@@ -33,8 +35,11 @@ export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   // add to cart
-  const addToCart = (id, color, amount, product) => {
-    dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
+  const addToCart = (id, color, amount, product, shipping) => {
+    dispatch({
+      type: ADD_TO_CART,
+      payload: { id, color, amount, product, shipping },
+    });
   };
 
   const removeItem = (id) => {
@@ -53,6 +58,10 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     dispatch({ type: COUNT_CART_TOTALS });
     localStorage.setItem("cart", JSON.stringify(state.cart));
+  }, [state.cart]);
+
+  useEffect(() => {
+    dispatch({ type: CHECK_FREE_SHIPPING });
   }, [state.cart]);
 
   return (

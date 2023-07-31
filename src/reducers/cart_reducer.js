@@ -1,5 +1,6 @@
 import {
   ADD_TO_CART,
+  CHECK_FREE_SHIPPING,
   CLEAR_CART,
   COUNT_CART_TOTALS,
   REMOVE_CART_ITEM,
@@ -9,7 +10,10 @@ import {
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
     // passing in values from addToCart
-    const { id, color, amount, product } = action.payload;
+    const { id, color, amount, product, shipping } = action.payload;
+
+    console.log(shipping);
+
     // checks if item is in the cart
     const tempItem = state.cart.find((i) => i.id === id + color);
 
@@ -45,6 +49,7 @@ const cart_reducer = (state, action) => {
         image: product.images[0].url,
         price: product.price,
         max: product.stock,
+        shipping,
       };
       // adds the new item to the cart
       return { ...state, cart: [...state.cart, newItem] };
@@ -96,6 +101,15 @@ const cart_reducer = (state, action) => {
       }
     );
     return { ...state, total_amount, total_items };
+  }
+  if (action.type === CHECK_FREE_SHIPPING) {
+    let flag = true;
+    state.cart.forEach((cartItem) => {
+      if (!cartItem.shipping) {
+        flag = false;
+      }
+    });
+    return { ...state, free_shipping: flag };
   }
   throw new Error(`No Matching "${action.type}" - action type`);
 };
