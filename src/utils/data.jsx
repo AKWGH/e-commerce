@@ -27,6 +27,13 @@ export const services = [
   },
 ];
 
-export const products_url = "/.netlify/functions/products";
+// production env
+// export const products_url = "/.netlify/functions/products";
 
-export const single_product_url = "/.netlify/functions/single-product?id=";
+// export const single_product_url = "/.netlify/functions/single-product?id=";
+
+// local env
+export const products_url = "https://www.course-api.com/react-store-products";
+
+export const single_product_url =
+  "https://www.course-api.com/react-store-single-product?id=";
